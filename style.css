@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/bg4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-gap: 1.5rem;
+}
+.container{
+    grid-column: span 9 / 13;
+    position: relative;
+}
+.icon{
+    position: absolute;
+    top: 14rem;
+    left: 30%;
+    font-size: 2rem;
+    color: rgb(230, 125, 125);
+    border: 2px rgb(230, 125, 125) solid;
+    border-radius: 30px;
+    padding: 0.5rem;
+}
+
+.icon:hover{
+    color: tomato;
+    cursor: pointer;
+    border-color: tomato;
+}
+.hero-text{
+    color: rgb(114, 113, 113);
+    line-height: 4rem;
+    align-self: center;
+}
+
+.hero-text h1{
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.hero-text h2{
+    font-size: 1.8rem;
+    font-weight: 200;
+    font-family: 'Mako', sans-serif;
+}
+
+span{
+    color: rgb(230, 125, 125);
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+nav{
+    grid-column: span 2 / 3 ;
+    align-self: center;
+    justify-self: center;
+}
+
+.nav-item::before{
+    content: ' ';
+    height: 30vh;
+    width: 2px;
+    background-color: rgb(208, 208, 208);
+    display: block;
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+.nav-item::after{
+    content: ' ';
+    height: 30vh;
+    width: 2px;
+    background-color: rgb(208, 208, 208);
+    display: block;
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+.nav-link{
+    list-style: none;
+    margin: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.nav-link a{
+    text-decoration: none;
+    color: rgb(138, 138, 136);
+}
+li:hover {
+    color: rgb(230, 125, 125);
+    transform: scale(1.1);
+}
+.nav-link:active a{
+    color: rgb(197, 80, 80);
+}
+
+li:hover a{
+    color: rgb(230, 125, 125);
+    transform: scale(1.1);
+}
+
+.active{
+    transform: scale(1.2);
+}
+
+.active a{
+    color : rgb(230, 125, 125);
+}
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+ @-webkit-keyframes shake-vertical {
+    0%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateY(8px);
+              transform: translateY(8px);
+    }
+    80% {
+      -webkit-transform: translateY(6.4px);
+              transform: translateY(6.4px);
+    }
+    90% {
+      -webkit-transform: translateY(-6.4px);
+              transform: translateY(-6.4px);
+    }
+  }
+  @keyframes shake-vertical {
+    0%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateY(8px);
+              transform: translateY(8px);
+    }
+    80% {
+      -webkit-transform: translateY(6.4px);
+              transform: translateY(6.4px);
+    }
+    90% {
+      -webkit-transform: translateY(-6.4px);
+              transform: translateY(-6.4px);
+    }
+  }
+  
+  
+.icon {
+	-webkit-animation: shake-vertical 3s ease-out infinite both;
+	        animation: shake-vertical 3s ease-out infinite both;
+}
+
+
+
